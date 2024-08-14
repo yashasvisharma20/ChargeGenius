@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChargeGenius</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: url('/static/bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      margin: 0;
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .navbar-brand img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .header, .about, .contact {
+      padding: 80px 0;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      margin: 20px;
+    }
+
+    .header {
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .header h1, .header p {
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .about, .contact {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .about img {
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+
+    .about img:hover {
+      transform: scale(1.1);
+    }
+
+    .contact a {
+      transition: transform 0.3s;
+    }
+
+    .contact a:hover {
+      transform: scale(1.2);
+    }
+
+    .footer {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="/static/logo.jpeg" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#Explore">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <header id="Explore" class="header">
+    <div class="container">
+      <h1 class="display-4">Welcome To ChargeGenius</h1>
+      <p class="lead">Innovation intersect with meticulous accuracy</p>
+      <h2 class="display-6">Explore Insurance Charges</h2>
+      <a href="/form" class="btn btn-light btn-lg mt-4">Explore</a>
+      <div class="description mt-4">
+        <p>Our website leverages advanced data analytics and machine learning to forecast insurance charges with remarkable accuracy. By analyzing various factors, we provide personalized predictions that help users understand and manage their insurance expenses more effectively.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="text-center mb-5">About Us</h2>
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+          <img src="static\logo.jpeg" class="img-fluid" alt="profile">
+        </div>
+        <div class="col-md-8">
+          <p>Our Insurance Charge Prediction platform utilizes cutting-edge data science and machine learning techniques to provide accurate forecasts. We employ advanced models, including Forest Regression and K-Nearest Neighbors (KNN), to analyze complex datasets and predict insurance charges with high precision.</p>
+          <p>The Forest Regression model is employed to capture complex relationships within the data, while KNN helps refine predictions based on similar historical cases. Together, these models ensure that our predictions are both reliable and insightful, enabling users to make informed decisions regarding their insurance expenses.</p>
+          <p>Our commitment is to harness the power of technology to simplify insurance charge predictions and offer valuable insights that support effective decision-making. Explore our platform to experience how advanced data science and machine learning can transform your understanding of insurance costs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="text-center mb-5">Contact Us</h2>
+      <div class="row text-center">
+        <div class="col-3">
+          <a href="#" class="btn btn-outline-light btn-lg"><i class="bi bi-instagram"></i> Instagram</a>
+        </div>
+        <div class="col-3">
+          <a href="#" class="btn btn-outline-light btn-lg"><i class="bi bi-twitter"></i> Twitter</a>
+        </div>
+        <div class="col-3">
+          <a href="https://github.com/yashasvisharma20" class="btn btn-outline-light btn-lg"><i class="bi bi-github"></i> GitHub</a>
+        </div>
+        <div class="col-3">
+          <a href="https://www.linkedin.com/in/yashasvi-sharma-3009392a8/" class="btn btn-outline-light btn-lg"><i class="bi bi-linkedin"></i> Linkedin</a>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 ChargeGenius. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

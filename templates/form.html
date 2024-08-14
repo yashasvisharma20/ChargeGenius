@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="/static/main.css" />
+    <style>
+        /* Full Page Styles */
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden; /* Prevents default scrollbars on the body */
+        }
+
+        .form-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: auto; /* Allows scrollbars when content exceeds viewport */
+            background: url('/static/bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            padding: 20px;
+        }
+
+        .form {
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        .form h1 {
+            margin-bottom: 20px;
+        }
+
+        .form p {
+            margin-bottom: 15px;
+        }
+
+        .form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form input[type="number"],
+        .form input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .form .radio-group,
+        .form .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .form .radio-group label,
+        .form .checkbox-group label {
+            margin-right: 10px;
+        }
+
+        .form .button {
+            display: inline-block;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .form .button:hover {
+            background-color: #0056b3;
+        }
+
+        .form .button:active {
+            background-color: #004494;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form">
+            <h1>Enter Your Details</h1>
+            <form action="/submit_form" method="POST">
+                <p>
+                    <label for="age">Age:</label>
+                    <input type="number" name="age" id="age" placeholder="Enter your age" autocomplete="on" required class="input" />
+                </p>
+                <p>
+                    <label for="bmi">BMI:</label>
+                    <input type="number" name="bmi" id="bmi" step="1" placeholder="Enter your BMI" autocomplete="on" required class="input" />
+                </p>
+                <p>
+                    <label for="child">Number of Children:</label>
+                    <input type="number" name="child" id="child" placeholder="Enter number of children" autocomplete="on" class="input" />
+                </p>
+                <p>
+                    <label>Gender:</label>
+                    <div class="radio-group">
+                        <input type="radio" name="gender" id="gender_male" value="Male" />
+                        <label for="gender_male">Male</label>
+                        <input type="radio" name="gender" id="gender_female" value="Female" />
+                        <label for="gender_female">Female</label>
+                    </div>
+                </p>
+                <p>
+                    <label>Smoker:</label>
+                    <div class="radio-group">
+                        <input type="radio" name="smoker" id="smoker_yes" value="1" />
+                        <label for="smoker_yes">Yes</label>
+                        <input type="radio" name="smoker" id="smoker_no" value="0" />
+                        <label for="smoker_no">No</label>
+                    </div>
+                </p>
+                <p>
+                    <label>Region:</label>
+                    <div class="radio-group">
+                        <input type="radio" name="region" id="region_northwest" value="northwest" />
+                        <label for="region_northwest">Northwest</label>
+                        <input type="radio" name="region" id="region_southeast" value="southeast" />
+                        <label for="region_southeast">Southeast</label>
+                        <input type="radio" name="region" id="region_southwest" value="southwest" />
+                        <label for="region_southwest">Southwest</label>
+                    </div>
+                </p>
+                <button type="submit" class="button">
+                    <p class="text">Submit</p>
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
